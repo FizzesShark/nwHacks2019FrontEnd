@@ -2,33 +2,64 @@
 <html>
   <head>
     <title>Settings</title>
+    <link rel="stylesheet" href="Semantic-UI-CSS-master/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="edit.css">
   </head>
   <body class="Montserrat">
-    <div class="card animated" style="height:100vh" id="overlay">
+    <div class="card animated" style="height:100vh">
     <div class="container">
       <div class="box" style="margin-top: 20px">
         <img src="images/gear-icon.png" width="72" height="72" style="float: left; vertical-align:middle;">
         <span></span><h1>Settings</h1></span><br>
       </div>
-      <form>
-        <select id="language">
-          <option value="fr">French</option>
-          <option value="de">German</option>
-          <option value="zh">Chinese</option>
-          <option value="uk">Ukrainian</option>
-          <option value="ro">Romanian</option>
-          <option value="ru">Russian</option>
-        </select>
-        <br>
-      </form>
-      <button id="lang-submit">Submit</button>
+      <div id="language" class="ui fluid search selection dropdown" style="margin-top: 20px">
+        <input type="hidden">
+        <i class="dropdown icon"></i>
+        <div class="default text">Select Language</div>
+        <div class="menu">
+          <div class="item" data-value="fr">French</div>
+          <div class="item" data-value="de">German</div>
+          <div class="item" data-value="zh">Chinese</div>
+          <div class="item" data-value="uk">Ukrainian</div>
+          <div class="item" data-value="ro">Romanian</div>
+          <div class="item" data-value="ru">Russian</div>
+          <div class="item" data-value="kr">Korean</div>
+          <div class="item" data-value="it">Italian</div>
+          <div class="item" data-value="es">Spanish</div>
+        </div>
+      </div>
+      <br>
+      <div id="focus" class="ui fluid search selection dropdown" style="margin-top: 10px">
+          <input type="hidden">
+          <i class="dropdown icon"></i>
+          <div class="default text">Select Focus Area</div>
+          <div class="menu">
+            <div class="item" data-value="noun">Nouns</div>
+            <div class="item" data-value="adj">Adjectives</div>
+            <div class="item" data-value="verb">Verbs</div>
+            <div class="item" data-value="pronoun">Pronouns</div>
+            <div class="item" data-value="adverb">Adverbs</div>
+            <div class="item" data-value="preposition">Prepositions</div>
+            <div class="item" data-value="conjunction">Conjunctions</div>
+            <div class="item" data-value="determiner">Determiners</div>
+            <div class="item" data-value="exclamation">Exclamations</div>
+          </div>
+        </div>
+      <br>
+      <button id="lang-submit" class="ui primary large button">Update</button>
+      <div class="ui message animated" id="success" style="opacity: 0">
+        <div class="header">
+          Success!
+        </div>
+        <p>Your language and focus preferences have been sucessfully updated.</p>
+      </div>
     </div>
     </div>
   </body>
   <script src="jquery-3.3.1.js"></script>
+  <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
   <script src = "edit.js"></script>
   </html>

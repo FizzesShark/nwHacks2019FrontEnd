@@ -1,10 +1,9 @@
 chrome.runtime.onInstalled.addListener(function() {
-  window.open("newUser.html");
   chrome.identity.getProfileUserInfo(function(e){
     $.get("https://mykatz.lib.id/repeatedli@dev/new_user?id=" + e.id, function(data){
-      /*if (!data){
+      if (!data){
         window.open("newUser.html");
-      }*/
+      }
     });
   })
 });
