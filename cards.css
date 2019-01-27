@@ -25,7 +25,7 @@ h1 {
     align-items: center;
 }
 
-#flashCard, #subtext, #quiz-time{
+#flashCard, #subtext, #quiz-button{
     opacity: 0;
 }
 
