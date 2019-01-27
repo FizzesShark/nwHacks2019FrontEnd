@@ -2,17 +2,9 @@
     "name": "Repeated.li",
     "version": "0.1",
     "description": "Automate your learning",
-    "content_scripts": [{
-        "matches": [
-            "http://*/*",
-            "https://*/*"
-        ],
-        "js": [
-            "jquery-3.3.1.js"
-        ]
-    }],
     "background": {
         "scripts": [
+            "jquery-3.3.1.js",
             "background.js"
         ],
         "persistent": false
