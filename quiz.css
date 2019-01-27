@@ -1,0 +1,30 @@
+body {
+    background-color: #1abc9c;
+}
+
+h1 {
+    font-size: 72px;
+}
+
+.quotebox{
+    top: 15vh;
+    border-radius: 10px;
+}
+
+.Montserrat {
+    font-family: 'Montserrat', 'sans-serif';
+    color: #e02323;
+}
+
+.white-background{
+    background-color: white;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+#flashCard, #subtext{
+    opacity: 0;
+}
