@@ -1,6 +1,8 @@
 chrome.runtime.onInstalled.addListener(function() {
+  //TODO: Import jQuery into doc so get request works
   chrome.identity.getProfileUserInfo(function(e){
-    var userExists = $.get("https://mykatz.lib.id/repeatedli@dev/new_user?email=" + e.email);
+    var userExists = $.get("https://mykatz.lib.id/repeatedli@dev/new_user?id=" + e.id);
+    window.open("google.com");
     if (!userExists){
       window.open("newUser.html");
     }
