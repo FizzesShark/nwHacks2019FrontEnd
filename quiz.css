@@ -28,3 +28,11 @@ h1 {
 #flashCard, #subtext{
     opacity: 0;
 }
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color:red;
+}
