@@ -9,12 +9,22 @@
     <link rel="stylesheet" href="edit.css">
     <link rel="icon" type="image/png" href="images/repeat.png">
   </head>
+ <!--  <div class="ui secondary menu">
+      <a class="active item" data-tab="testone">One</a>
+      <a class="item" data-tab="testtwo">Two</a>
+    </div>
+    <div class="ui active tab segment" data-tab="testone">One</div>
+    <div class="ui tab segment" data-tab="testtwo">Two</div> -->
   <body class="Montserrat">
-    <div class="card animated" style="height:100vh">
-    <div class="container">
+    <div class="ui three pointing item menu">
+      <a class="active item" data-tab="settings">Settings</a>
+      <a class="item" data-tab="wordlist">Word List</a>
+      <a class="item" data-tab="analytics">Analytics</a>
+    </div>
+    <div class="ui active tab segment" data-tab="settings">
       <div class="box" style="margin-top: 20px">
         <img src="images/gear-icon.png" width="72" height="72" style="float: left; vertical-align:middle;">
-        <span></span><h1>Settings</h1></span><br>
+        <span></span><h1>&nbsp;Settings</h1></span><br>
       </div>
       <div id="language" class="ui fluid search selection dropdown" style="margin-top: 20px">
         <input type="hidden">
@@ -58,9 +68,15 @@
         <p>Your language and focus preferences have been sucessfully updated.</p>
       </div>
     </div>
+
+    <div class="ui tab segment" data-tab="wordlist">
+
+    </div>
+
+    <div class="ui tab segment" data-tab="analytics">Yes
     </div>
   </body>
   <script src="jquery-3.3.1.js"></script>
   <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
   <script src = "edit.js"></script>
-  </html>
+</html>
