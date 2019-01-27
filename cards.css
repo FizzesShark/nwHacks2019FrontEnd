@@ -25,6 +25,12 @@ h1 {
     align-items: center;
 }
 
-#flashCard, #subtext{
+#flashCard, #subtext, #quiz-time{
     opacity: 0;
+}
+
+.btn {
+    bottom: 5%;
+    right: 5%;
+    position: absolute;
 }

@@ -1,30 +1,21 @@
-var quizObj = {
-  Q1: {
-    word: "Fromage",
-    correct: "cheese"
-  },
-  Q2: {
-    word: "Chien",
-    correct: "dog"
-  },
-  Q3: {
-    word: "Soeur",
-    correct: "sister"
-  },
-  Q4: {
-    word: "Rive",
-    correct: "shore"
-  },
-  Q5: {
-    word: "Nourriture",
-    correct: "food"
-  }
-}
-
-$('.input-group').each(function( index ){
-  $(this).children(".input-group-text").val(quizObj["Q"+(index+1).toString()].word)
-});
-
 chrome.identity.getProfileUserInfo(function(e){
-  
+  $.get("https://mykatz.lib.id/repeatedli@dev/quiz?id=" + e.id, function (f){
+    for (var i=1;i<6;i++){
+      $("#basic-addon" + i).text(f["Q" + i].correct);
+    };
+    $("#submit-btn").click(function(){
+      var words = [];
+      var corrects = [];
+      for (var i=1; i<6; i++){
+        if ($("#inp" + i).val().toLowerCase() == f["Q" + i].word){
+          words[i - 1] = f["Q" + i].word;
+          corrects[i - 1] = true;
+        }else{
+          words[i - 1] = f["Q" + i].word;
+          corrects[i - 1] = false;
+        }
+      };
+      $.get("https://mykatz.lib.id/repeatedli@dev/submitquiz?id=" + e.id + "&obj=" + JSON.stringify({"words": words, "corrects": corrects}));
+    });
+  });
 });

@@ -1,4 +1,13 @@
 chrome.identity.getProfileUserInfo(function(e){
+  $.get("https://mykatz.lib.id/repeatedli@dev/quiz?id=" + e.id, function (g){
+    if (g){
+      console.log("Yes");
+      $("#quiz-button").addClass("fadeIn");
+      $("#quiz-button").click(function(){
+        window.open("quiz.html");
+      });
+    }
+  });
   $.get("https://mykatz.lib.id/repeatedli@dev/getWord?id=" + e.id, function(f){
     $("#flashCard").addClass("fadeIn");
     $("#flashCard").text(f.word);
