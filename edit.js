@@ -1,5 +1,6 @@
 var langSubmit = document.getElementById('lang-submit');
 langSubmit.addEventListener('click', function(){
+  
   var selected = document.getElementById('language');
   var lang = selected.options[selected.selectedIndex].value;
   chrome.identity.getProfileUserInfo(function(userInfo){

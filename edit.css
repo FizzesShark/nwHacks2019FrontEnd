@@ -1,3 +1,24 @@
 .Montserrat {
     font-family: 'Montserrat', 'sans-serif';
 }
+
+h1 {
+    font-size: 72px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+}
+
+.overlay {  
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    background: rgba(39, 42, 43, 0.8);
+    transition: opacity 200ms ease-in-out;
+    border-radius: 4px;
+    margin: -15px 0 0 -15px;
+  }

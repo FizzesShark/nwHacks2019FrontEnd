@@ -2,13 +2,18 @@
 <html>
   <head>
     <title>Settings</title>
-    <link rel="stylesheet" href="edit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="edit.css">
   </head>
   <body class="Montserrat">
+    <div class="card animated" style="height:100vh" id="overlay">
     <div class="container">
-      <h1>Settings</h1><br>
+      <div class="box" style="margin-top: 20px">
+        <img src="images/gear-icon.png" width="72" height="72" style="float: left; vertical-align:middle;">
+        <span></span><h1>Settings</h1></span><br>
+      </div>
       <form>
         <select id="language">
           <option value="fr">French</option>
@@ -21,6 +26,7 @@
         <br>
       </form>
       <button id="lang-submit">Submit</button>
+    </div>
     </div>
   </body>
   <script src="jquery-3.3.1.js"></script>
