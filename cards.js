@@ -4,8 +4,10 @@ chrome.identity.getProfileUserInfo(function(e){
     $("#flashCard").text(f.word);
     setTimeout(function(){
       $("#flashCard").addClass("fadeOutUp");
-      $("#flashCard").text(f.translated);
       setTimeout(function(){
+        $("#flashCard").text(f.translated);
+        $("#subtext").text("Times seen: " + f.count);
+        $("#subtext").addClass("fadeInUp");
         $("#flashCard").removeClass("fadeOutUp");
         $("#flashCard").addClass("fadeInUp");
         console.log("fuck");

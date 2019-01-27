@@ -2,9 +2,13 @@ body {
     background-color: #ff7b56;
 }
 
+h1 {
+    font-size: 72px;
+}
+
 .quotebox{
     top: 20vh;
-    border-radius: 30px;
+    border-radius: 10px;
 }
 
 .Montserrat {
@@ -21,6 +25,6 @@ body {
     align-items: center;
 }
 
-#flashCard{
+#flashCard, #subtext{
     opacity: 0;
 }
