@@ -1,3 +1,26 @@
-.prompt {
-    font-family: 'Montserrat', sans-serif;
+body {
+    background-color: #ff7b56;
+}
+
+.quotebox{
+    top: 20vh;
+    border-radius: 30px;
+}
+
+.Montserrat {
+    font-family: 'Montserrat', 'sans-serif';
+    color: #e02323;
+}
+
+.white-background{
+    background-color: white;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+#flashCard{
+    opacity: 0;
 }
